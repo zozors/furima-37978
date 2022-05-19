@@ -14,7 +14,7 @@
 ### Association
 
 * has_many :items
-* has_many :transactions
+* has_many :purchases
 
 ## items テーブル
 
@@ -22,10 +22,10 @@
 | ---------------------------| ----------- | ----------------|
 | title                      | string      | null: false     |
 | content                    | text        | null: false     |
-| category_id                | string      | null: false     |
-| situation_id               | string      | null: false     |
-| burden_of_shipping_charge_id| string      | null: false     |
-| prefecture_id              | string      | null: false     |
+| category_id                | integer      | null: false     |
+| situation_id               | integer     | null: false     |
+| burden_of_shipping_charge_id| integer      | null: false     |
+| prefecture_id              | integer      | null: false     |
 | shipping_day_id            | integer     | null: false     |
 | price                      | integer     | null: false     |
 | user                       | references  |foreign_key: true|
@@ -33,9 +33,9 @@
 ### Association
 
 * belongs_to :user
-* has_one :transactions
+* has_one :purchases
 
-## transactions 　テーブル
+## purchases 　テーブル
 
 | Column             | Type        | Options         |
 | ------------------ | ----------- | ----------------|
@@ -51,13 +51,13 @@
 
 | Column             | Type        | Options         |
 | ------------------ | ----------- | --------------- |
-| postal code        | string      | null: false     |
+| postal_code        | string      | null: false     |
 | prefecture         | string      | null: false     |
 | municipalities     | string      | null: false     |
 | address            | text        | null: false     |
-| building name      | string      |                 |
-| telephone number   | string      | null: false     |
+| building_name      | string      |                 |
+| telephone_number   | string      | null: false     |
 | transaction        | references  | null: false foreign_key: true|
 
 ### Association
-* belongs_to :transactions
+* belongs_to :purchases
