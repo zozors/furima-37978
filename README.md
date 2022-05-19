@@ -52,7 +52,7 @@
 | Column             | Type        | Options                      |
 | ------------------ | ----------- | ---------------------------- |
 | postal_code        | string      | null: false                  |
-| prefecture_id      | string      | null: false                  |
+| prefecture_id      | integer      | null: false                  |
 | municipalities     | string      | null: false                  |
 | address            | text        | null: false                  |
 | building_name      | string      |                              |
