@@ -1,24 +1,44 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column                | Type   | Options     |
+| ------------------    | ------ | ----------- |
+| nickname              | string | null: false |
+| email                 | string | null: false |
+| password              | string | null: false |
+| password_confirmation | string | null: false |
+| first_name            | string | null: false |
+| last_name             | string | null: false |
+| birthday              | string | nill: false |
 
-Things you may want to cover:
+## items テーブル
 
-* Ruby version
+| Column                     | Type        | Options         |
+| ---------------------------| ----------- | ----------------|
+| image                      | text        | null: false     |
+| title                      | string      | null: false     |
+| content                    | text        | null: false     |
+| category                   | string      | null: false     |
+| situation                  | string      | null: false     |
+| burden of shipping charges | string      | null: false     |
+| shipping area              | string      | null: false     |
+| shipping days              | string      | null: false     |
+| user_id                    | references  |foreign_key: true|
 
-* System dependencies
+## transactions 　テーブル
 
-* Configuration
+| Column             | Type        | Options         |
+| ------------------ | ----------- | ----------------|
+| buyer              | string      | null: false     |
+| title              | string      | null: false     |
+| user_id            | references  |foreign_key: true|
 
-* Database creation
+## addresses テーブル
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| postal code        | string | null: false |
+| prefectures        | string | null: false |
+| municipalities     | string | null: false |
+| address            | text   | null: false |
+| building name      | string | null: false |
+| telephone number   | string | null: false |
