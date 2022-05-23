@@ -1,7 +1,11 @@
 class Item < ApplicationRecord
   belongs_to :user
+  has_one_attached :image
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category, :situation, :burden_of_shipping_charge, :prefecture, :shipping_day
 
-  validates :image, presence: true
+  validates :category_id, :situation_id, :burden_of_shipping_charge_id, :prefecture_id, :shipping_day_id, numericality: { other_than: 1 , message: "can't be blank" } 
+
   validates :title, presence: true
   validates :content, presence: true
   validates :category, presence: true
