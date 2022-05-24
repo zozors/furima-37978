@@ -9,7 +9,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :shipping_day
 
-  validates :category_id, :situation_id, :burden_of_shipping_charge_id, :shipping_day_id,
+  validates :category_id, :situation_id, :burden_of_shipping_charge_id, :prefecture_id, :shipping_day_id,
             numericality: { other_than: 1, message: "can't be blank" }
 
   validates :image, presence: true
