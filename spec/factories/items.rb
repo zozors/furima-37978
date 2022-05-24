@@ -6,7 +6,7 @@ FactoryBot.define do
     situation                    { Situation.all.sample }
     burden_of_shipping_charge    { BurdenOfShippingCharge.all.sample }
     prefecture                   { Prefecture.all.sample }
-    shipping_day                 { ShippingDay.all.sample}
+    shipping_day                 { ShippingDay.all.sample }
     price                        { '500' }
     association :user
 
