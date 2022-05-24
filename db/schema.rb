@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_22_151632) do
+ActiveRecord::Schema.define(version: 2022_05_22_150237) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2022_05_22_151632) do
     t.string "title", null: false
     t.text "content", null: false
     t.integer "category_id", null: false
-    t.integer "situation", null: false
+    t.integer "situation_id", null: false
     t.integer "burden_of_shipping_charge_id", null: false
     t.integer "prefecture_id", null: false
     t.integer "shipping_day_id", null: false
