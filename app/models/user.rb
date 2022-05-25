@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # has_many :items
+  has_many :items
   # has_many :purchases
 
-  validates :nickname, presence: true   
+  validates :nickname, presence: true
   validates :last_name, format: { with: /\A([ぁ-んァ-ヶ一-龥々]|ー)+\z/ }, presence: true
   validates :first_name, format: { with: /\A([ぁ-んァ-ヶ一-龥々]|ー)+\z/ }, presence: true
   validates :last_name_katakana, format: { with: /\A([ァ-ン]|ー)+\z/ }, presence: true
