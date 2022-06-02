@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        last_name: 苗字
+        first_name: 名前
+        last_name_katakana: 苗字(ｶﾅ)
+        first_name_katakana: 名前(ｶﾅ)
+        birthday: 誕生日
+
+      item:
+        category_id : カテゴリー
+        situation_id : 商品状態
+        burden_of_shipping_charge_id : 配送料の負担
+        prefecture_id : 発送元地域
+        shipping_day_id : 発送までの日数
+        image : 画像
+        title : 商品名
+        content : 商品の説明
+        price : 金額
+
+
+
